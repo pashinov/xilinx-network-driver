@@ -1,0 +1,18 @@
+#...............................................................................
+#
+# Travis CI
+#
+#...............................................................................
+
+sudo:     required
+dist:     trusty
+language: cpp
+
+os: linux
+
+install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y linux-headers-$(uname -r)
+
+script:
+  - make
